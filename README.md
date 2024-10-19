@@ -14,9 +14,11 @@ PhoneBook is a modern web application for managing contacts that allows users to
 
 - React
 - Redux
-- Axios
-- React Router
 - Redux Persist
+- Redux Toolkit
+- Axios
+- React Router DOM
+
 - Formik
 - Yup
 - React Hot Toast
