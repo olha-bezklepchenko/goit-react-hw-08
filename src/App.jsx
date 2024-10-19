@@ -8,6 +8,7 @@ import Loader from "./components/Loader/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { selectIsRefreshing } from "./redux/auth/selectors";
 import { refreshUser } from "./redux/auth/operations";
+import { Toaster } from "react-hot-toast";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const RegistrationPage = lazy(() =>
@@ -27,6 +28,7 @@ const App = () => {
 
   return isRefreshing ? null : (
     <>
+      <Toaster />
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Layout />}>
