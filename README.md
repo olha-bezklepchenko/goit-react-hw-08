@@ -1,6 +1,6 @@
 # PhoneBook
 
-PhoneBook is a modern web application for managing contacts that allows users to add, edit, delete, and search for contacts. The application implements user authentication and data storage using Redux and Axios, providing a pleasant user interface with the ability to change the theme and main accent color.
+PhoneBook is a modern web application for managing contacts that allows users to add, edit, delete, and search for contacts. The application implements user authentication and data storage using Redux and Axios, providing a pleasant user interface.
 
 ## Features
 
