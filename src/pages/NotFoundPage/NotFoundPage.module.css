@@ -34,7 +34,29 @@
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: transparent;
+  padding: 10px;
+  border-radius: 16px;
+  border: none;
+  height: 48px;
+  background-color: #dce9f5;
+  color: #052a4b;
+  font-weight: 600;
+  box-shadow: 6px 6px 12px rgba(34, 45, 65, 0.4),
+    -6px -6px 12px rgba(240, 248, 255, 0.2);
+  transition: all 350ms linear;
   width: 150px;
+}
+
+.btn:hover {
+  background-color: #065096;
+  color: #dce9f5;
 }
 
 @media screen and (min-width: 768px) {

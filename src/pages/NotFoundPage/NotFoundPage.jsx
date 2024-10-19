@@ -1,11 +1,9 @@
 import Container from "../../components/Container/Container.jsx";
 import css from "./NotFoundPage.module.css";
-// import image from "../../assets/night.webp";
+import image from "../../assets/images/error-404-page.webp";
 import { NavLink } from "react-router-dom";
 
 const NotFoundPage = () => {
-  const image =
-    "https://cdni.iconscout.com/illustration/premium/thumb/error-404-page-not-available-illustration-download-in-svg-png-gif-file-formats--found-pack-science-technology-illustrations-7706458.png";
   return (
     <Container>
       <div className={css.wrapper}>

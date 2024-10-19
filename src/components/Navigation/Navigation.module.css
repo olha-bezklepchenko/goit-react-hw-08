@@ -53,9 +53,6 @@
   .nav {
     gap: 10px;
   }
-  .link {
-    font-size: 20px;
-  }
 
   .active {
     width: 100px;
