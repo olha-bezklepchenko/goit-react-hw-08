@@ -1,14 +1,22 @@
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
+import { GrEdit } from "react-icons/gr";
 import css from "./Contact.module.css";
-import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsOps";
+
+import ConfirmDeleteModal from "../ConfirmDeleteModal/ConfirmDeleteModal";
+import { useToggle } from "../../helpers/hooks/useToogle";
+import EditContactModal from "../EditContactModal/EditContactModal";
 
 const Contact = ({ id, name, number }) => {
-  const dispatch = useDispatch();
-
-  const handleDelete = () => {
-    dispatch(deleteContact(id));
-  };
+  const {
+    isOpen: isDeleteOpen,
+    openModal: openDeleteModal,
+    closeModal: closeDeleteModal,
+  } = useToggle();
+  const {
+    isOpen: isEditOpen,
+    openModal: openEditModal,
+    closeModal: closeEditModal,
+  } = useToggle();
 
   return (
     <>
@@ -22,9 +30,22 @@ const Contact = ({ id, name, number }) => {
           {number}
         </p>
       </div>
-      <button className={css.deleteBtn} type="button" onClick={handleDelete}>
-        Delete
-      </button>
+      <div className={css.btnPanel}>
+        <button className={css.editBtn} type="button" onClick={openEditModal}>
+          <GrEdit className={css.editIcon} />
+        </button>
+        {isEditOpen && <EditContactModal id={id} onClose={closeEditModal} />}
+        <button
+          className={css.deleteBtn}
+          type="button"
+          onClick={openDeleteModal}
+        >
+          Delete
+        </button>
+      </div>
+      {isDeleteOpen && (
+        <ConfirmDeleteModal id={id} onClose={closeDeleteModal} />
+      )}
     </>
   );
 };

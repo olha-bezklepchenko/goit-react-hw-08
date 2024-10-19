@@ -1,14 +1,19 @@
-import ContactForm from "./components/ContactForm/ContactForm.jsx";
-import ContactList from "./components/ContactList/ContactList.jsx";
-import SearchBox from "./components/SearchBox/SearchBox.jsx";
-import { FaAddressBook } from "react-icons/fa";
-import css from "./App.module.css";
-import "modern-normalize/modern-normalize.css";
 import { useDispatch, useSelector } from "react-redux";
-import { selectIsError, selectIsLoading } from "./redux/contactsSlice.js";
 import { useEffect } from "react";
-import { fetchContacts } from "./redux/contactsOps.js";
-import Loader from "./components/Loader/Loader.jsx";
+import {
+  selectIsError,
+  selectIsLoading,
+} from "../../redux/contacts/selectors.js";
+import { fetchContacts } from "../../redux/contacts/operations.js";
+import ContactForm from "../../components/ContactForm/ContactForm.jsx";
+import ContactList from "../../components/ContactList/ContactList.jsx";
+import SearchBox from "../../components/SearchBox/SearchBox.jsx";
+import Loader from "../../components/Loader/Loader.jsx";
+import { FaAddressBook } from "react-icons/fa";
+import css from "./ContactsPage.module.css";
+import Container from "../../components/Container/Container.jsx";
+import ScrollTopBtn from "../../components/ScrollTopBtn/ScrollTopBtn.jsx";
+import image from "../../assets/images/contacts.webp";
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -20,13 +25,26 @@ const ContactsPage = () => {
   }, [dispatch]);
 
   return (
-    <>
-      <h1 className={css.title}>
-        <FaAddressBook className={css.titleIcon} />
-        Phone<span className={css.titleAccent}>Book</span>
-      </h1>
-      <ContactForm />
+    <Container>
+      <div className={css.pageTopWrap}>
+        <div className={css.titleWrap}>
+          <h1 className={css.pageTitle}>
+            <FaAddressBook className={css.titleIcon} />
+            Phone<span className={css.titleAccent}>Book</span>
+          </h1>
+
+          <img
+            className={css.pageImg}
+            src={image}
+            alt="people log in website"
+            width="500"
+          />
+        </div>
+
+        <ContactForm />
+      </div>
       <SearchBox />
+
       {isLoading && !isError && <Loader />}
       {isError && (
         <p className={css.error}>
@@ -37,7 +55,9 @@ const ContactsPage = () => {
         </p>
       )}
       <ContactList />
-    </>
+
+      <ScrollTopBtn />
+    </Container>
   );
 };
 

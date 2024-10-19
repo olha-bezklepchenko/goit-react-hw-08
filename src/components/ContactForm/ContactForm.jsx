@@ -1,23 +1,16 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
-import * as Yup from "yup";
 import css from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/contacts/operations";
+import { phonebookSchema } from "../../helpers/validationsSchems";
+import { MdAddIcCall } from "react-icons/md";
+
 
 const ContactForm = () => {
-  const dispatch = useDispatch();
-  const phoneRegExp = /^\d{3}-\d{3}-\d{4}$/;
+  const initialValues = { name: "", number: "" };
 
-  const phonebookSchema = Yup.object().shape({
-    name: Yup.string()
-      .min(3, "Too short!")
-      .max(50, "Too long!")
-      .required("Name is required"),
-    number: Yup.string()
-      .matches(phoneRegExp, "Must be in format 000-000-0000")
-      .required("Phone number is required"),
-  });
+  const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
     dispatch(
@@ -31,11 +24,14 @@ const ContactForm = () => {
 
   return (
     <Formik
-      initialValues={{ name: "", number: "" }}
+      initialValues={initialValues}
       onSubmit={handleSubmit}
       validationSchema={phonebookSchema}
     >
       <Form className={css.form}>
+        <h2 className={css.title}>
+          <MdAddIcCall className={css.icon} /> New contact
+        </h2>
         <div className={css.fieldWrapper}>
           <label htmlFor="name" className={css.label}>
             Name

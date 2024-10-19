@@ -2,25 +2,37 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
-
   background: linear-gradient(145deg, #dce9f5, #f5f3ed);
   border-radius: 16px;
   box-shadow: 6px 6px 12px rgba(34, 45, 65, 0.4),
     -6px -6px 12px rgba(240, 248, 255, 0.2);
-  padding: 20px 20px 32px;
+  padding: 10px 20px 20px;
   width: 100%;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  margin-bottom: 32px;
+}
+
+.icon {
+  color: #dce9f5;
+  background-color: #065096;
+  padding: 5px;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  gap: 5px;
 }
 
 .fieldWrapper {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+
   width: 100%;
-  height: 100px;
+  height: 80px;
 }
 
 .label {
@@ -55,19 +67,7 @@
 
 .btn {
   width: 150px;
-  height: 48px;
-  padding: 10px;
-  border-radius: 16px;
-  border: none;
-  background-color: #dce9f5;
-  color: #052a4b;
-  font-weight: 600;
-
-  box-shadow: 6px 6px 12px rgba(34, 45, 65, 0.4),
-    -6px -6px 12px rgba(240, 248, 255, 0.2);
-  transition: all 350ms linear;
 }
-
 .btn:hover {
   background-color: #065096;
   color: #dce9f5;
@@ -75,7 +75,13 @@
 
 @media screen and (min-width: 375px) {
   .form {
-    min-width: 311px;
-    max-width: 364px;
+    width: 335px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    width: 360px;
+    flex-shrink: 0;
   }
 }
