@@ -73,10 +73,10 @@
 @media screen and (min-width: 768px) {
   .pageWrap {
     min-height: 520px;
+    padding: 0 0 10px 0;
   }
   .pageTopWrap {
     flex-direction: row;
-    padding: 20px 0 0;
     gap: 40px;
   }
   .titleWrap {
@@ -116,7 +116,7 @@
 
 @media screen and (min-width: 1024px) {
   .pageWrap {
-    min-height: 590px;
+    min-height: 520px;
   }
   .pageTitle {
     font-size: 52px;
@@ -128,6 +128,15 @@
   }
   .pageSubtitle {
     font-size: 24px;
+  }
+  .pageImg {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .pageWrap {
+    min-height: 570px;
   }
   .pageImg {
     width: 350px;

@@ -65,19 +65,12 @@
   text-decoration: underline;
 }
 
-@media screen and (min-width: 375px) {
-  /* .pageWrap {
-    min-height: 710px;
-  } */
-}
-
 @media screen and (min-width: 768px) {
   .pageWrap {
     min-height: 510px;
   }
   .pageTopWrap {
     flex-direction: row;
-
     gap: 40px;
   }
   .titleWrap {

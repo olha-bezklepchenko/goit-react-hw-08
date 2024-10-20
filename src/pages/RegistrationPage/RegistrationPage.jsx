@@ -20,7 +20,7 @@ const RegistrationPage = () => {
               className={css.pageImg}
               src={image}
               alt="people creating account"
-              width="450"
+              width="400"
             />
           </div>
           <RegistrationForm />

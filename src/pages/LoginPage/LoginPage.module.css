@@ -108,16 +108,12 @@
     min-height: 560px;
   }
 
-  /* .pageWrap {
-    padding: 50px 0;
-  } */
   .pageTitle {
     font-size: 52px;
   }
 
   .pageText {
     font-size: 20px;
-    margin-bottom: 40px;
   }
   .pageImg {
     width: 500px;

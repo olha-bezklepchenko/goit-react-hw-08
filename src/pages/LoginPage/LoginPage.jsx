@@ -21,7 +21,7 @@ const LoginPage = () => {
               className={css.pageImg}
               src={image}
               alt="people log in website"
-              width="500"
+              width="400"
             />
           </div>
           <LoginForm />
