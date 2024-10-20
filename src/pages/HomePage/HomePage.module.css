@@ -57,6 +57,10 @@
   margin: 0 auto;
 }
 
+.informText {
+  font-size: 14px;
+}
+
 .link {
   color: #065096;
   font-weight: 600;
@@ -106,6 +110,7 @@
     display: flex;
     justify-content: center;
     gap: 6px;
+    font-size: 16px;
   }
 }
 

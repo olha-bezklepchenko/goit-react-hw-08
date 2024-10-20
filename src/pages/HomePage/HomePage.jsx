@@ -36,7 +36,7 @@ const HomePage = () => {
             <p className={css.accent}>Don&#39;t have an account yet?</p>
             <div className={css.informText}>
               <p>Create your profile</p>
-              <Link className={css.link} to="/registration">
+              <Link className={css.link} to="/register">
                 now
               </Link>
               <p>and start managing your contacts effortlessly.</p>

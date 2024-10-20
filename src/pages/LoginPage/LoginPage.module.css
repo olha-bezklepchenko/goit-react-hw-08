@@ -54,6 +54,7 @@
   display: flex;
   justify-content: center;
   gap: 6px;
+  font-size: 14px;
 }
 
 .link {
@@ -96,6 +97,9 @@
   }
   .pageInform {
     font-size: 18px;
+  }
+  .informText {
+    font-size: 16px;
   }
 }
 
