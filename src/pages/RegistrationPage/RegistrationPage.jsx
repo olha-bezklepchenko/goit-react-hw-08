@@ -1,7 +1,7 @@
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 import Container from "../../components/Container/Container";
 import css from "./RegistrationPage.module.css";
-import image from "../../assets/images/create-account.png";
+import image from "../../assets/images/create-account.webp";
 import { Link } from "react-router-dom";
 
 const RegistrationPage = () => {

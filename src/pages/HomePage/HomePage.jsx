@@ -14,9 +14,11 @@ const HomePage = () => {
         <div className={css.titleWrap}>
           <h1 className={css.pageTitle}>
             Hi there! I&#39;m your go-to{" "}
-            <FaAddressBook className={css.titleIcon} />
-            Phone
-            <span className={css.accent}>Book</span>
+            <span>
+              <FaAddressBook className={css.titleIcon} />
+              Phone
+              <span className={css.accent}>Book</span>
+            </span>
           </h1>
           <h2 className={css.pageSubtitle}>
             My perks? <br /> Accessibility, reliability, and simplicity.

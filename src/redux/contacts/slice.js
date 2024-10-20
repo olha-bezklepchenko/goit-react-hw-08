@@ -6,6 +6,8 @@ import {
   editContact,
 } from "./operations";
 
+import { logout } from "../auth/operations";
+
 const initialState = {
   items: [],
   isLoading: false,
@@ -33,6 +35,9 @@ const contactsSlice = createSlice({
         if (index !== -1) {
           state.items[index] = action.payload;
         }
+      })
+      .addCase(logout.fulfilled, (state) => {
+        state.items = [];
       })
 
       .addMatcher(
