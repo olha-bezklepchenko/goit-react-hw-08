@@ -60,11 +60,11 @@
 @media screen and (min-width: 768px) {
   .pageTopWrap {
     flex-direction: row;
-    padding-top: 20px;
     align-items: start;
     gap: 40px;
     margin-bottom: 20px;
   }
+
   .titleWrap {
     text-align: start;
   }

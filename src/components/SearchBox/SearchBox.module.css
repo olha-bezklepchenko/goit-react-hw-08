@@ -26,10 +26,6 @@
   margin-bottom: 5px;
 }
 
-.label {
-  align-self: baseline;
-}
-
 .input {
   width: 100%;
   border-radius: 8px;
@@ -48,6 +44,10 @@
   box-shadow: 6px 6px 12px rgba(34, 45, 65, 0.6),
     -6px -6px 12px rgba(240, 248, 255, 0.3);
   outline: none;
+}
+
+.input::placeholder {
+  font-size: 14px;
 }
 
 @media screen and (min-width: 375px) {

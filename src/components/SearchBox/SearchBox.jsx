@@ -17,10 +17,6 @@ const SearchBox = () => {
       <h2 className={css.title}>
         <ImSearch className={css.icon} /> Find contacts
       </h2>
-      <label htmlFor="search" className={css.label}>
-        Search by name or number
-      </label>
-
       <input
         className={css.input}
         type="text"
@@ -28,6 +24,8 @@ const SearchBox = () => {
         id="search"
         value={filter}
         onChange={handleFilterChange}
+        placeholder="Try search by name or number"
+        aria-label="Search contacts by name or phone number"
       />
     </div>
   );
