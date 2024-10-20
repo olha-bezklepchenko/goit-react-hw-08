@@ -13,7 +13,8 @@
 
 .pageTitle {
   font-size: 28px;
-  max-width: 594px;
+  width: 100%;
+  max-width: 320px;
 }
 .pageSubtitle {
   font-size: 18px;
@@ -70,6 +71,7 @@
 
   .pageTitle {
     font-size: 40px;
+    max-width: 594px;
   }
 
   .titleIcon {
