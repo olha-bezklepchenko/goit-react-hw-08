@@ -32,7 +32,6 @@ const ContactsPage = () => {
             <FaAddressBook className={css.titleIcon} />
             Phone<span className={css.titleAccent}>Book</span>
           </h1>
-
           <img
             className={css.pageImg}
             src={image}
@@ -40,11 +39,9 @@ const ContactsPage = () => {
             width="500"
           />
         </div>
-
         <ContactForm />
       </div>
       <SearchBox />
-
       {isLoading && !isError && <Loader />}
       {isError && (
         <p className={css.error}>
@@ -55,7 +52,6 @@ const ContactsPage = () => {
         </p>
       )}
       <ContactList />
-
       <ScrollTopBtn />
     </Container>
   );

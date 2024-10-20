@@ -1,10 +1,18 @@
 .pageWrap {
   display: flex;
   flex-direction: column;
+  height: 80vh;
+  min-height: 630px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pageTopWrap {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
 .titleWrap {
@@ -57,12 +65,20 @@
   text-decoration: underline;
 }
 
+@media screen and (min-width: 375px) {
+  .pageWrap {
+    min-height: 560px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .pageWrap {
+    min-height: 440px;
+  }
+
+  .pageTopWrap {
     flex-direction: row;
-    padding: 50px 0;
     gap: 40px;
-    margin-bottom: 60px;
   }
   .titleWrap {
     text-align: start;
@@ -84,6 +100,13 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .pageWrap {
+    min-height: 560px;
+  }
+
+  /* .pageWrap {
+    padding: 50px 0;
+  } */
   .pageTitle {
     font-size: 52px;
   }

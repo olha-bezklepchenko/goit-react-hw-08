@@ -60,10 +60,10 @@
 @media screen and (min-width: 768px) {
   .pageTopWrap {
     flex-direction: row;
-    padding-top: 32px;
+    padding-top: 20px;
     align-items: start;
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .titleWrap {
     text-align: start;
@@ -101,6 +101,6 @@
   }
 
   .pageImg {
-    width: 420px;
+    width: 380px;
   }
 }
