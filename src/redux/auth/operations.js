@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { toastError } from "../../helpers/toastConfig";
+import { toastSuccess, toastError } from "../../helpers/toastConfig";
 
 axios.defaults.baseURL = "https://connections-api.goit.global/";
 
@@ -45,8 +45,8 @@ export const login = createAsyncThunk(
 export const logout = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
   try {
     await axios.post("/users/logout");
-
     clearAuthHeader();
+    toastSuccess("Goodbye! I hope, see you again!");
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }
